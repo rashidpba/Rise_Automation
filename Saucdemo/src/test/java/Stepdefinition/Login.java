@@ -41,7 +41,7 @@ public class Login {
 	@Then("add to cart randomly")
 	public void add_to_cart_randomly() throws InterruptedException {
 	    
-		 
+		 Thread.sleep(2000);
 		   
 		   List<WebElement>elements= driver.findElements(By.xpath("//*[@class=\"btn btn_primary btn_small btn_inventory\"]"));
 			int count=elements.size();
@@ -56,6 +56,8 @@ public class Login {
 
 
 		 WebElement cart=driver.findElement(By.xpath("//*[@class=\"shopping_cart_link\"]"));
+		
+			
 		 try {
 		 cart.click();
 		
