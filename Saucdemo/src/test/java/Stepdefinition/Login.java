@@ -18,7 +18,7 @@ public class Login {
 	
 	@Given("open  https:\\/\\/www.saucedemo.com\\/")
 	public void open_https_www_saucedemo_com() throws InterruptedException {
-	  System.setProperty("webdriver.chrome.driver","D:\\seleneum\\Saucdemo\\src\\test\\resources\\Drivers\\chromedriver.exe");
+	  System.setProperty("webdriver.chrome.driver",".\\src\\test\\resources\\Drivers\\chromedriver.exe");
 	  driver=new ChromeDriver();
     	
 	  driver.get("https://www.saucedemo.com/");
@@ -67,6 +67,7 @@ public class Login {
 				 cart=driver.findElement(By.xpath("//*[@class=\"shopping_cart_link\"]"));
 				 cart.click();
 			}
+		 Thread.sleep(2000);
 			driver.close();
 			
 			}
